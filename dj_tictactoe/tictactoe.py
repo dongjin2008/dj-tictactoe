@@ -1,7 +1,7 @@
 # TODO: 5. draw
 # TODO: 6. check if any player has won
 # TODO: 7. print win
-
+import sys
 class Tic_Tac_Toe:
     def __init__(self):
         self.grid = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
@@ -60,8 +60,6 @@ class Tic_Tac_Toe:
             else:
                 if len(self.empty_cell) == 0:
                     print("It's draw")
-                else:
-                    pass 
                 
             
     
@@ -70,4 +68,6 @@ class Tic_Tac_Toe:
             self.Draw_Board()
             self.Draw()
             if self.Win_Lose():
-                break
+                sys.exit()
+                
+    

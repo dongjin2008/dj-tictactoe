@@ -1,5 +1,6 @@
-from tictactoe import Tic_Tac_Toe
+from dj_tictactoe.tictactoe import Tic_Tac_Toe
 
 ttt = Tic_Tac_Toe()
 
-print(ttt.Run())
+def cli():
+    print(ttt.Run())
