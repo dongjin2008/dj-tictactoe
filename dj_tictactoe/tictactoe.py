@@ -28,15 +28,13 @@ class Tic_Tac_Toe:
         if self.user_input in self.empty_cell:
             self.empty_cell.remove(self.user_input)
             return True
-        else:
-            return False
+        return False
 
     def Turn(self):
         if self.Check_Valid:
             if self.turn:
                  return "o"
-            else:
-                 return "x"
+            return "x"
 
     def Draw(self):
         shape = self.Turn()
@@ -54,12 +52,11 @@ class Tic_Tac_Toe:
             if self.grid[items[0] - 1] == "o" and self.grid[items[1] - 1] == "o" and self.grid[items[2] -1] == "o":
                 print("o won")
                 return True
-            elif self.grid[items[0] - 1] == "x" and self.grid[items[1] - 1] == "x" and self.grid[items[2] -1] == "x":
+            if self.grid[items[0] - 1] == "x" and self.grid[items[1] - 1] == "x" and self.grid[items[2] -1] == "x":
                 print("x won")
                 return True
-            else:
-                if len(self.empty_cell) == 0:
-                    print("It's draw")
+            if len(self.empty_cell) == 0:
+                print("It's draw")
 
 
 
