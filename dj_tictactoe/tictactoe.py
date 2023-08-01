@@ -46,10 +46,10 @@ class Tic_Tac_Toe:
 
     def Win_Lose(self):
         for items in self.win_pattern:
-            if self.grid[items[0] - 1] == "o" and self.grid[items[1] - 1] == "o" and self.grid[items[2] -1] == "o":
+            if self.grid[items[0] - 1] == "o" and self.grid[items[1] - 1] == "o" and self.grid[items[2] - 1] == "o":
                 print("o won")
                 return True
-            if self.grid[items[0] - 1] == "x" and self.grid[items[1] - 1] == "x" and self.grid[items[2] -1] == "x":
+            if self.grid[items[0] - 1] == "x" and self.grid[items[1] - 1] == "x" and self.grid[items[2] - 1] == "x":
                 print("x won")
                 return True
             if len(self.empty_cell) == 0:
