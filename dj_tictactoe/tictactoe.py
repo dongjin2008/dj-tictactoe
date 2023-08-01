@@ -1,6 +1,3 @@
-# TODO: 5. draw
-# TODO: 6. check if any player has won
-# TODO: 7. print win
 import sys
 class Tic_Tac_Toe:
     def __init__(self):
