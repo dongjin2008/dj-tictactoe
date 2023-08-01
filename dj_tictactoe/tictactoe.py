@@ -8,11 +8,11 @@ class Tic_Tac_Toe:
         self.user_input = self.UI()
 
     def Draw_Board(self): 
-        print("%s | %s | %s" % self.grid[0], self.grid[1], self.grid[2])
+        print("%s | %s | %s" % self.grid[:3])
         print("----------")
-        print("%s | %s | %s" % self.grid[3], self.grid[4], self.grid[5])
+        print("%s | %s | %s" % self.grid[3:-3])
         print("----------")
-        print("%s | %s | %s\n" % self.grid[6], self.grid[7], self.grid[8])
+        print("%s | %s | %s\n" % self.grid[6:])
 
     def UI(self):
         if self.turn:
