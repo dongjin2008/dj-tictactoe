@@ -5,6 +5,7 @@ class Tic_Tac_Toe:
         self.empty_cell = ["1", "2", "3", "4", "5" ,"6", "7", "8", "9"] 
         self.win_pattern = [(1,2,3), (4,5,6), (7,8,9), (1,4,7), (2,5,8), (3,6,9), (1,5,9), (3,5,7)]
         self.turn = True
+        self.user_input = self.UI()
 
     def Draw_Board(self): 
         print("{} | {} | {}".format(self.grid[0], self.grid[1], self.grid[2]))
@@ -21,7 +22,7 @@ class Tic_Tac_Toe:
         return input("Enter the number: ")
 
     def Check_Valid(self):
-        self.user_input = self.UI()
+
         if self.user_input in self.empty_cell:
             self.empty_cell.remove(self.user_input)
             return True
@@ -63,5 +64,4 @@ class Tic_Tac_Toe:
             self.Draw()
             if self.Win_Lose():
                 sys.exit()
-
 
