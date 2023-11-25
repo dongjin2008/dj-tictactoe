@@ -30,18 +30,13 @@ class Tic_Tac_Toe:
 
     def Turn(self):
         if self.Check_Valid:
-            if self.turn:
-                 return "o"
-            return "x"
+            return "o" if self.turn else "x"
 
     def Draw(self):
         shape = self.Turn()
         if self.Check_Valid():
             self.grid[int(self.user_input) - 1] = shape
-            if shape == "o":
-                self.turn = False
-            else:
-                self.turn = True
+            self.turn = shape != "o"
         else:
             print("Invalid Number!!")
 
