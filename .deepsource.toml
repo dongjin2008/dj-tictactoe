@@ -1,7 +1,24 @@
 version = 1
 
 [[analyzers]]
-name = "python"
+  name = "python"
+  enabled = true
 
   [analyzers.meta]
-  runtime_version = "3.x.x"
+    runtime_version = "3.9" # Or a more recent applicable version like 3.10, 3.11
+    # python_version = 3 # Alternative way to specify major version
+
+[[analyzers]]
+  name = "pylint"
+  enabled = true
+
+  [analyzers.meta]
+    python_version = 3 # Specify major Python version for Pylint
+    # You can add a .pylintrc file to the project root for more detailed Pylint configuration
+    # and DeepSource will pick it up. For now, we'll use default Pylint checks.
+
+# Example of exclude_patterns if needed later:
+# exclude_patterns = [
+#   "__pycache__/**",
+#   "*.lock"
+# ]
